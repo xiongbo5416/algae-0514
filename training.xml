@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>Training faces</name>
+<comment>These are images from the PASCAL VOC 2011 dataset.</comment>
+<images>
+  <image file='1121.jpg'>
+    <box top='88' left ='51' width ='98' height ='70'/>
+    <box top='114' left ='109' width ='80' height ='54'/>
+    <box top='138' left ='111' width ='83' height ='71'/>
+    <box top='116' left ='190' width ='80' height ='79'/>
+    <box top='326' left ='192' width ='101' height ='77'/>
+    <box top='487' left ='205' width ='112' height ='93'/>
+    <box top='606' left ='219' width ='104' height ='90'/>
+    <box top='862' left ='137' width ='108' height ='95'/>
+    <box top='867' left ='254' width ='102' height ='93'/>
+    <box top='697' left ='332' width ='97' height ='91'/>
+    <box top='871' left ='453' width ='104' height ='97'/>
+    <box top='365' left ='438' width ='98' height ='78'/>
+    <box top='454' left ='505' width ='120' height ='87'/>
+    <box top='521' left ='511' width ='116' height ='80'/>
+    <box top='766' left ='661' width ='95' height ='72'/>
+    <box top='503' left ='699' width ='110' height ='78'/>
+    <box top='194' left ='731' width ='93' height ='76'/>
+    <box top='36' left ='635' width ='83' height ='59'/>
+    <box top='172' left ='947' width ='95' height ='75'/>
+    <box top='331' left ='914' width ='113' height ='79'/>
+    <box top='599' left ='957' width ='93' height ='82'/>
+    <box top='873' left ='1015' width ='96' height ='68'/>
+    <box top='717' left ='1121' width ='102' height ='80'/>
+    <box top='282' left ='1185' width ='97' height ='62'/>
+    <box top='859' left ='1385' width ='91' height ='73'/>
+    <box top='913' left ='1462' width ='93' height ='66'/>
+    <box top='187' left ='1518' width ='90' height ='69'/>
+    <box top='218' left ='1546' width ='90' height ='75'/>
+  </image>
+  <image file='C:/Users/xiong/OneDrive - McMaster University/code_algae/0514/1291.jpg'>
+    <box top='82' left ='38' width ='104' height ='81'/>
+    <box top='332' left ='51' width ='99' height ='82'/>
+    <box top='603' left ='8' width ='120' height ='86'/>
+    <box top='724' left ='0' width ='114' height ='77'/>
+    <box top='873' left ='6' width ='118' height ='100'/>
+    <box top='774' left ='93' width ='125' height ='90'/>
+    <box top='718' left ='200' width ='122' height ='96'/>
+    <box top='482' left ='144' width ='119' height ='107'/>
+    <box top='417' left ='275' width ='151' height ='121'/>
+    <box top='529' left ='375' width ='101' height ='81'/>
+    <box top='458' left ='442' width ='122' height ='91'/>
+    <box top='787' left ='500' width ='105' height ='105'/>
+    <box top='747' left ='572' width ='120' height ='91'/>
+    <box top='800' left ='700' width ='135' height ='103'/>
+    <box top='588' left ='666' width ='123' height ='94'/>
+    <box top='286' left ='636' width ='118' height ='84'/>
+    <box top='110' left ='523' width ='99' height ='73'/>
+    <box top='102' left ='591' width ='107' height ='79'/>
+    <box top='171' left ='1035' width ='87' height ='82'/>
+    <box top='299' left ='981' width ='91' height ='79'/>
+    <box top='543' left ='1046' width ='107' height ='81'/>
+    <box top='431' left ='1124' width ='97' height ='74'/>
+    <box top='475' left ='1098' width ='95' height ='67'/>
+    <box top='736' left ='1118' width ='100' height ='82'/>
+    <box top='890' left ='1196' width ='118' height ='79'/>
+    <box top='622' left ='1178' width ='121' height ='80'/>
+    <box top='124' left ='1163' width ='106' height ='91'/>
+    <box top='164' left ='1278' width ='94' height ='54'/>
+    <box top='208' left ='1265' width ='89' height ='80'/>
+    <box top='193' left ='1396' width ='78' height ='74'/>
+    <box top='242' left ='1436' width ='83' height ='59'/>
+    <box top='113' left ='1515' width ='82' height ='64'/>
+    <box top='58' left ='1545' width ='95' height ='63'/>
+  </image>
+  <image file='C:/Users/xiong/OneDrive - McMaster University/code_algae/0514/1355.jpg'>
+    <box top='750' left ='10' width ='102' height ='68'/>
+    <box top='764' left ='205' width ='110' height ='71'/>
+    <box top='776' left ='142' width ='89' height ='65'/>
+    <box top='260' left ='274' width ='119' height ='85'/>
+    <box top='380' left ='264' width ='115' height ='82'/>
+    <box top='341' left ='353' width ='135' height ='79'/>
+    <box top='855' left ='262' width ='137' height ='86'/>
+    <box top='107' left ='350' width ='118' height ='76'/>
+    <box top='897' left ='427' width ='115' height ='77'/>
+    <box top='545' left ='472' width ='140' height ='93'/>
+    <box top='277' left ='562' width ='80' height ='62'/>
+    <box top='258' left ='595' width ='98' height ='63'/>
+    <box top='442' left ='564' width ='121' height ='79'/>
+    <box top='620' left ='616' width ='121' height ='79'/>
+    <box top='120' left ='781' width ='89' height ='55'/>
+    <box top='125' left ='910' width ='83' height ='61'/>
+    <box top='441' left ='1015' width ='125' height ='74'/>
+    <box top='667' left ='1104' width ='111' height ='75'/>
+    <box top='873' left ='1083' width ='117' height ='94'/>
+    <box top='127' left ='1122' width ='110' height ='92'/>
+    <box top='568' left ='1145' width ='111' height ='86'/>
+    <box top='759' left ='1173' width ='111' height ='73'/>
+    <box top='271' left ='1266' width ='99' height ='63'/>
+    <box top='484' left ='1261' width ='98' height ='64'/>
+    <box top='566' left ='1283' width ='87' height ='70'/>
+    <box top='85' left ='1388' width ='88' height ='62'/>
+    <box top='626' left ='1432' width ='88' height ='73'/>
+    <box top='680' left ='1385' width ='88' height ='50'/>
+    <box top='322' left ='1546' width ='94' height ='64'/>
+    <box top='406' left ='1507' width ='89' height ='67'/>
+  </image>
+</images>
+</dataset>
