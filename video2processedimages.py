@@ -15,7 +15,7 @@ import dlib
 
 # provide folder path and video name
 PATH='C:/Users/xiong/OneDrive - McMaster University/Data and files/algae_project/0514/'
-FOLDER_name= '2/'
+FOLDER_name= '2_lensfree/'
 FOLDER_name_2='2_fl/'
 NAME_lensfree='2_lensfr.h264'
 NAME_scattering='2_fl.h264'
@@ -132,20 +132,20 @@ while period_num<100:
         #save frames
         name= PATH + FOLDER_name +str(current_frame+1000) +'.jpg'
         
-        #use hog to find particls in the images
-        dets = detector(gray_dif)
-        print("Number of faces detected: {}".format(len(dets)))
-        #    for k, d in enumerate(dets):
-        #        print("Detection {}: Left: {} Top: {} Right: {} Bottom: {}".format(
-        #            k, d.left(), d.top(), d.right(), d.bottom()))
-        for k, d in enumerate(dets):
-            print("  <box top='{}' left ='{}' width ='{}' height ='{}'/>".format(
-                d.top(), d.left(), d.right()-d.left(), d.bottom()-d.top()))
-            cv2.rectangle(gray_dif,(d.right(),d.bottom()),(d.left(),d.top()),(255),3)#use square to label the images
-        
-        #write note
-        font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(gray_dif,'red laser on',(50,150), font, 4, (255), 4, cv2.LINE_AA)
+#        #use hog to find particls in the images
+#        dets = detector(gray_dif)
+#        print("Number of faces detected: {}".format(len(dets)))
+#        #    for k, d in enumerate(dets):
+#        #        print("Detection {}: Left: {} Top: {} Right: {} Bottom: {}".format(
+#        #            k, d.left(), d.top(), d.right(), d.bottom()))
+#        for k, d in enumerate(dets):
+#            print("  <box top='{}' left ='{}' width ='{}' height ='{}'/>".format(
+#                d.top(), d.left(), d.right()-d.left(), d.bottom()-d.top()))
+#            cv2.rectangle(gray_dif,(d.right(),d.bottom()),(d.left(),d.top()),(255),3)#use square to label the images
+#        
+#        #write note
+#        font = cv2.FONT_HERSHEY_SIMPLEX
+#        cv2.putText(gray_dif,'red laser on',(50,150), font, 4, (255), 4, cv2.LINE_AA)
         
         cv2.imwrite(name,gray_dif)
         #record num of frames in this period
@@ -204,7 +204,7 @@ while current_frame_fl<current_frame:
        excitation_st = excitation_st+1
        if excitation_st>2:
            #save frames
-           name= PATH + FOLDER_name + str(list_period[period_num-1]+excitation_st-3+NUM_COMP) +'.jpg'
+           name= PATH + FOLDER_name_2 + str(list_period[period_num-1]+excitation_st-3+NUM_COMP) +'.jpg'
            #alighn scatteing/fl images to lensfree images
            gray_reg= alighment(shape_lensfr[1], shape_lensfr[0],gray_1)
            gray_reg= cv2.multiply(gray_reg,2)
@@ -227,19 +227,19 @@ while current_frame_fl<current_frame:
            #apply mask to filter out stable particles
            fg_gray_reg = cv2.bitwise_and(gray_reg,gray_reg, mask= fgmask)
 
-           #use red square to label the fluorescent particles
-           lower = np.array([40])
-           upper = np.array([255])
-           shapeMask = cv2.inRange(fg_gray_reg, lower, upper)
-           cnts = cv2.findContours(shapeMask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-           edges=cnts[1]
-           for points in edges:
-                cv2.rectangle(fg_gray_reg,(points[0][0][0]-30,points[0][0][1]-30),(points[0][0][0]+30,points[0][0][1]+30),(255),3)
-           #use red square to label the fluorescent particles */
+#           #use red square to label the fluorescent particles
+#           lower = np.array([40])
+#           upper = np.array([255])
+#           shapeMask = cv2.inRange(fg_gray_reg, lower, upper)
+#           cnts = cv2.findContours(shapeMask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+#           edges=cnts[1]
+#           for points in edges:
+#                cv2.rectangle(fg_gray_reg,(points[0][0][0]-30,points[0][0][1]-30),(points[0][0][0]+30,points[0][0][1]+30),(255),3)
+#           #use red square to label the fluorescent particles */
 
-            #write note
-           font = cv2.FONT_HERSHEY_SIMPLEX
-           cv2.putText(fg_gray_reg,'blue laser on',(50,150), font, 4, (255), 4, cv2.LINE_AA)
+#            #write note
+#           font = cv2.FONT_HERSHEY_SIMPLEX
+#           cv2.putText(fg_gray_reg,'blue laser on',(50,150), font, 4, (255), 4, cv2.LINE_AA)
         
            cv2.imwrite(name,fg_gray_reg) 
            #record num of frames in this period
