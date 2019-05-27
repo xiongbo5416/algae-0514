@@ -9,7 +9,7 @@ import sys
 import glob
 import cv2
 
-faces_folder = "C:/Users/xiong/OneDrive - McMaster University/Data and files/algae_project/0514/2"
+faces_folder = "C:/Users/xiong/OneDrive - McMaster University/Data and files/algae_project/0514/2_counting"
 
 img_array = []
 for f in glob.glob(os.path.join(faces_folder, "*.jpg")):
