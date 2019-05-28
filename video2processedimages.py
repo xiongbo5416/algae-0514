@@ -227,19 +227,19 @@ while current_frame_fl<current_frame:
            #apply mask to filter out stable particles
            fg_gray_reg = cv2.bitwise_and(gray_reg,gray_reg, mask= fgmask)
 
-           #use red square to label the fluorescent particles
-           lower = np.array([40])
-           upper = np.array([255])
-           shapeMask = cv2.inRange(fg_gray_reg, lower, upper)
-           cnts = cv2.findContours(shapeMask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-           edges=cnts[1]
-           for points in edges:
-                cv2.rectangle(fg_gray_reg,(points[0][0][0]-30,points[0][0][1]-30),(points[0][0][0]+30,points[0][0][1]+30),(255),3)
-           #use red square to label the fluorescent particles */
-
-            #write note
-           font = cv2.FONT_HERSHEY_SIMPLEX
-           cv2.putText(fg_gray_reg,'blue laser on',(50,150), font, 4, (255), 4, cv2.LINE_AA)
+#           #use red square to label the fluorescent particles
+#           lower = np.array([40])
+#           upper = np.array([255])
+#           shapeMask = cv2.inRange(fg_gray_reg, lower, upper)
+#           cnts = cv2.findContours(shapeMask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+#           edges=cnts[1]
+#           for points in edges:
+#                cv2.rectangle(fg_gray_reg,(points[0][0][0]-30,points[0][0][1]-30),(points[0][0][0]+30,points[0][0][1]+30),(255),3)
+#           #use red square to label the fluorescent particles */
+#
+#            #write note
+#           font = cv2.FONT_HERSHEY_SIMPLEX
+#           cv2.putText(fg_gray_reg,'blue laser on',(50,150), font, 4, (255), 4, cv2.LINE_AA)
         
            cv2.imwrite(name,fg_gray_reg) 
            #record num of frames in this period
