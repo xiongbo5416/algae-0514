@@ -9,7 +9,7 @@ import sys
 import glob
 import cv2
 
-faces_folder = "C:/Users/xiong/OneDrive - McMaster University/Data and files/algae_project/0514/2_counting"
+faces_folder = "C:/Users/xiong/OneDrive - McMaster University/Data and files/algae_project/0514/2"
 
 img_array = []
 for f in glob.glob(os.path.join(faces_folder, "*.jpg")):
@@ -24,6 +24,7 @@ out = cv2.VideoWriter('project.avi',cv2.VideoWriter_fourcc(*'DIVX'), 5, size)
  
 for i in range(len(img_array)):
     out.write(img_array[i])
+    
 out.release()
 
 
